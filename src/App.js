@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import api from "./api/axiosConfig";
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet'
 import { Layout } from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home/Home';
@@ -48,9 +49,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header>
+      <Helmet>
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-      </Header>
+      </Helmet>
+      <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path='/' element={<Home movies={movies} />}> </Route>
