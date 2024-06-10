@@ -49,9 +49,6 @@ function App() {
 
   return (
     <div className="App">
-      <Helmet>
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-      </Helmet>
       <Header />
       <Routes>
         <Route path="/" element={<Layout />}>
