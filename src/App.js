@@ -48,7 +48,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      </Header>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path='/' element={<Home movies={movies} />}> </Route>
