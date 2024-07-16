@@ -1,11 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 import React from 'react'
+import { isLoggedIn } from "../api/auth/LoginUtil";
 
 export const Layout = () => {
   return (
-    <main>
-        <Outlet />
-    </main>
+    isLoggedIn() ? 
+        <Outlet /> : <Navigate to={"/login"}/>
   )
 }

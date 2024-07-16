@@ -1,7 +1,7 @@
 import Hero from "../hero/Hero"
-const Home = ({movies}) => {
+const Home = () => {
   return (
-    <Hero movies={movies} />
+    <Hero />
   )
 }
 
